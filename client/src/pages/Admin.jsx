@@ -14,7 +14,7 @@ const Admin = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/events');
+      const res = await axios.get('https://event-booking-1ooh.onrender.com/events');
       setEvents(res.data);
     } catch (error) {
       console.error("Error fetching events:", error);
@@ -24,7 +24,7 @@ const Admin = () => {
   const handleCreate = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/events', formData);
+      await axios.post('https://event-booking-1ooh.onrender.com/events', formData);
       setFormData({ title: '', description: '', location: '', date: '', total_seats: '', price: '', img: '' });
       fetchEvents(); 
       alert("Event created successfully!");
@@ -37,7 +37,7 @@ const Admin = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this event?")) {
       try {
-        await axios.delete(`http://localhost:5000/events/${id}`);
+        await axios.delete(`https://event-booking-1ooh.onrender.com/events/${id}`);
         fetchEvents(); 
       } catch (error) {
         console.error("Error deleting event:", error);
