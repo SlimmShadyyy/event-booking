@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { io } from 'socket.io-client';
 import { Link } from 'react-router-dom';
 
-const socket = io('http://localhost:5000'); 
+const socket = io('https://event-booking-1ooh.onrender.com'); 
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -30,7 +30,7 @@ const Events = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/events`, {
+      const res = await axios.get(`https://event-booking-1ooh.onrender.com/events`, {
         params: { search, location }
       });
       setEvents(res.data);
