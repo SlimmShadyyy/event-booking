@@ -14,7 +14,7 @@ const Booking = () => {
   const [bookingDetails, setBookingDetails] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/events/${id}`)
+    axios.get(`https://event-booking-1ooh.onrender.com/events/${id}`)
       .then(res => setEvent(res.data))
       .catch(err => console.error(err));
   }, [id]);
@@ -26,7 +26,7 @@ const Booking = () => {
 
     try {
       // Sending data to backend
-      const res = await axios.post('http://localhost:5000/bookings', {
+      const res = await axios.post('https://event-booking-1ooh.onrender.com/bookings', {
         event_id: id,
         name: formData.name,
         email: formData.email,
