@@ -2,9 +2,6 @@
 
 [cite_start]A premium, full-stack event ticketing platform featuring a high-performance dark-mode UI, real-time seat availability, and dynamic pricing[cite: 1, 4, 12, 57].
 
-## 🚀 Live Demo
-- **Frontend:** [Paste your Vercel URL here]
-- **Backend:** [Paste your Render URL here]
 
 ## 💻 Key Features
 - [cite_start]**Modern Landing Page:** Featuring parallax scrolling, Framer Motion animations, and a dynamic tech-ticker inspired by the Summitra reference[cite: 57, 59, 61].
